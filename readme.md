@@ -28,21 +28,21 @@ https://ng-api-ndaidong.c9.io/players/PLAYER_ID
 Return a Player object
 ```
 {
-player: {
-id: "dPe0oMSQQ1YC",
-name: "Jonathan Castro",
-avatar: "http://eightbitavatar.herokuapp.com/?id=dPe0oMSQQ1YC&s=male&size=120",
-birthday: "4/27/1991",
-age: 24,
-height: 178,
-weight: 86,
-nationality: "Netherlands",
-club: "Lyon",
-position: "RB",
-rating: 59,
-level: "Professional",
-price: 10000000
-}
+  player: {
+    id: "dPe0oMSQQ1YC",
+    name: "Jonathan Castro",
+    avatar: "http://eightbitavatar.herokuapp.com/?id=dPe0oMSQQ1YC&s=male&size=120",
+    birthday: "4/27/1991",
+    age: 24,
+    height: 178,
+    weight: 86,
+    nationality: "Netherlands",
+    club: "Lyon",
+    position: "RB",
+    rating: 59,
+    level: "Professional",
+    price: 10000000
+  }
 }
 ```
 
