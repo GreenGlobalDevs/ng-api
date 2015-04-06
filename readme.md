@@ -70,3 +70,4 @@ Result:
 }
 ```
 
+If there is not any player found, it will return 'false'.
