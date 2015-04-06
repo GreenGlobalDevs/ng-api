@@ -1,14 +1,14 @@
-## ng-api RESTFul API for AngularJS Training
+## ng-api 
 
-Build with Laravel 5
+RESTFul API for AngularJS Training. Build with Laravel 5.
 
 ### Developer guide
 
-Base URL : https://ng-api-ndaidong.c9.io/
+Base URL : http://ng-api.techpush.net/
 
 #### Get all players by default order
 
-https://ng-api-ndaidong.c9.io/players
+http://ng-api.techpush.net/players
 
 Return a collection of Player object
 
@@ -25,7 +25,11 @@ The following parameters are available:
 
 https://ng-api-ndaidong.c9.io/players/PLAYER_ID
 
-Return a Player object
+Return a Player object.
+
+For example: http://ng-api.techpush.net/players/dPe0oMSQQ1YC
+
+Result:
 ```
 {
   player: {
