@@ -12,7 +12,7 @@ https://ng-api-ndaidong.c9.io/players
 
 Return a collection of Player object
 
-The following parameters as available:
+The following parameters are available:
 
 - _search : String, optional
 - _key : String, optional. Must be a valid property of Player object.
