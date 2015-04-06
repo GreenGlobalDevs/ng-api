@@ -24,14 +24,22 @@ The following parameters are available:
 Example requests:
 
 Get all players who have the phrase "ph" in name:
+
+```
 http://ng-api.techpush.net/players?_search=ph&_key=name
+```
 
 Get all player who have the phrase "ph" in name, then extract only from 5 to 10:
+
+```
 http://ng-api.techpush.net/players?_search=ph&_key=name&_start=5&_end=10
+```
 
 Get all player who have the phrase "ph" in name, and sort them by age from old to young:
-http://ng-api.techpush.net/players?_search=ph&_key=name&_sort=age&_order=desc
 
+```
+http://ng-api.techpush.net/players?_search=ph&_key=name&_sort=age&_order=desc
+```
 
 #### Get a specified player
 
