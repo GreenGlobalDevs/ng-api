@@ -1,0 +1,6 @@
+{
+    "require": {
+        "xamin/handlebars.php": "dev-master",
+        "techpush/bella.php": "dev-master"
+    }
+}

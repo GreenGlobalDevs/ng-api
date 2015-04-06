@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="homepage" content="{{siteURL}}">
+	
+	<meta name="author" content="{{creator}}">
+	<meta itemprop="name" content="{{title}}">
+	<meta itemprop="description" content="{{description}}">
+	<meta itemprop="image" content="{{image}}">
+	
+    <!-- OpenGraph metadata -->
+    <meta property="og:site_name" content="{{name}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:url" content="{{url}}">
+    <meta property="og:creator" content="{{creator}}">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="{{image}}">
+    <meta property="og:description" content="{{description}}">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{name}}">
+    <meta name="twitter:creator" content="{{creator}}">
+    <meta name="twitter:url" content="{{url}}">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="{{image}}">
+	<meta name="twitter:image:src" content="{{image}}">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="msvalidate.01" content="71972FD988969F5F1DAA25324B18F32A" />
+
+    <title>{{title}}</title>
+    <link rel="icon" href="{@BASEDIR}favicon.ico" sizes="24x24">
+    <link rel="shortcut icon" href="{@BASEDIR}favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="{{canonical}}">
+    <link rel="alternate" type="application/rss+xml" href="{{siteURL}}feed?output=rss" title="{{name}} - RSS">
+    <link rel="alternate" type="application/atom+xml" href="{{siteURL}}feed?output=atom" title="{{name}} - ATOM">
+    {@STYLE}
+  </head>
+  <body>
+    {@CONTEXT}   
+    <script type="text/javascript">{@SCRIPTDATA};</script>
+    <script type="text/javascript" ping="/public/js/app" src="/public/js/bella.min.js"></script>
+    {@SCRIPT}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-28010152-7', 'techpush.net');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
