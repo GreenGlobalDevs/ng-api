@@ -43,11 +43,15 @@ http://ng-api.techpush.net/players?_search=ph&_key=name&_sort=age&_order=desc
 
 #### Get a specified player
 
-https://ng-api-ndaidong.c9.io/players/{PLAYER_ID}
+http://ng-api.techpush.net/players/{PLAYER_ID}
 
 Return a Player object.
 
-For example: http://ng-api.techpush.net/players/dPe0oMSQQ1YC
+Example: 
+
+```
+http://ng-api.techpush.net/players/dPe0oMSQQ1YC
+```
 
 Result:
 ```
