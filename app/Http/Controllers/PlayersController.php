@@ -127,6 +127,7 @@ class PlayersController extends Controller {
     public function one($id)
     {
         $re = (object) [
+            'error' => 0,
             'player' => false
         ];
 
