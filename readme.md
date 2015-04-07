@@ -1,23 +1,99 @@
-## Laravel PHP Framework
+## ng-api 
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+RESTFul API using for AngularJS Training. Build with Laravel 5.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+### Developer guide
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Base URL : http://ng-api.techpush.net/
 
-## Official Documentation
+#### Get all players by default order
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+http://ng-api.techpush.net/players
 
-## Contributing
+Return a collection of Player object
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+The following parameters are available:
 
-### License
+- _search : String, optional
+- _key : String, optional. Must be a valid property of Player object.
+- _sort : String, optional. Must be a valid property of Player object.
+- _order : ['desc' | 'asc'], optional.  Default : 'asc'
+- _start : Interger, optional. Default : 0
+- _end : Interger, optional.  Default : 30
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Example requests:
+
+Get all players who are playing for Valencia:
+
+```
+http://ng-api.techpush.net/players?_search=Valencia&_key=club
+```
+
+Get all Argentine players:
+
+```
+http://ng-api.techpush.net/players?_search=Argentina&_key=nationality
+```
+
+Get 5 most expensive English players:
+```
+http://ng-api.techpush.net/players?_search=England&_key=nationality&_sort=price&_order=desc&_end=5
+```
+
+Get all players who have the phrase "ph" in name:
+
+```
+http://ng-api.techpush.net/players?_search=ph&_key=name
+```
+
+Get all players who have the phrase "ph" in name, then extract only from 5 to 10:
+
+```
+http://ng-api.techpush.net/players?_search=ph&_key=name&_start=5&_end=10
+```
+
+Get all players who have the phrase "ph" in name, and sort them by age from old to young:
+
+```
+http://ng-api.techpush.net/players?_search=ph&_key=name&_sort=age&_order=desc
+```
+
+#### Get a specified player
+
+http://ng-api.techpush.net/players/{PLAYER_ID}
+
+Return a Player object.
+
+Example: 
+
+```
+http://ng-api.techpush.net/players/dPe0oMSQQ1YC
+```
+
+Result:
+```
+{
+  player: {
+    id: "dPe0oMSQQ1YC",
+    name: "Jonathan Castro",
+    avatar: "http://eightbitavatar.herokuapp.com/?id=dPe0oMSQQ1YC&s=male&size=120",
+    birthday: "4/27/1991",
+    age: 24,
+    height: 178,
+    weight: 86,
+    nationality: "Netherlands",
+    club: "Lyon",
+    position: "RB",
+    rating: 59,
+    level: "Professional",
+    price: 10000000
+  }
+}
+```
+
+If there is not any player found, it will return 'false'.
+
+#### Author by:
+
+- @GreenGlobal.vn
+- @ndaidong at Twitter
