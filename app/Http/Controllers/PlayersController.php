@@ -93,24 +93,30 @@ class PlayersController extends Controller {
 
             if(!!$sort && property_exists($one, $sort)){
 
-                $mod = 'asc';
+                $ord = 'asc';
                 $edited = $entries;
 
                 if(!!$order && strtolower($order)=='desc'){
-                    $mod = 'desc';
+                    $ord = 'desc';
                 }
-                usort($edited, function($a, $b) use ($sort, $mod){
-                    return $mod=='asc'?$a->$sort - $b->$sort:$b->$sort-$a->$sort;
-                });
 
-                $entries = $edited;
+                function arrange(&$items, $key, $order='asc'){
+                    if(is_array($items)){
+                        return usort($items, function($a, $b) use ($key, $order){
+                            return ($order=='desc'?-1:1)*strCmp($a->$key, $b->$key);
+                        });
+                    }
+                    return false;
+                }
+
+                arrange($edited, $sort, $ord);
             }
 
             if($start>=0 && $start<$total && $end>$start){
                 $tmp = [];
                 $max = min($end, $total);
                 for($i=$start; $i<$max; $i++){
-                    array_push($tmp, $entries[$i]);
+                    array_push($tmp, $edited[$i]);
                 }
                 $entries = $tmp;
             }
