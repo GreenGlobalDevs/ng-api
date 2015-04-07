@@ -23,6 +23,19 @@ The following parameters are available:
 
 Example requests:
 
+Get all Argentine players:
+
+```
+http://ng-api.techpush.net/players?_search=Argentina&_key=nationality
+```
+
+Get all players who are playing for Valencia:
+
+```
+http://ng-api.techpush.net/players?_search=Valencia&_key=club
+```
+
+
 Get all players who have the phrase "ph" in name:
 
 ```
