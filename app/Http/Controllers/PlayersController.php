@@ -47,7 +47,7 @@ class PlayersController extends Controller {
         }
 
         $re = (object) [
-            'error' => 1,
+            'error' => 0,
             'queries' => [],
             'result' => false
         ];
