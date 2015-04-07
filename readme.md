@@ -23,18 +23,22 @@ The following parameters are available:
 
 Example requests:
 
-Get all Argentine players:
-
-```
-http://ng-api.techpush.net/players?_search=Argentina&_key=nationality
-```
-
 Get all players who are playing for Valencia:
 
 ```
 http://ng-api.techpush.net/players?_search=Valencia&_key=club
 ```
 
+Get all Argentine players:
+
+```
+http://ng-api.techpush.net/players?_search=Argentina&_key=nationality
+```
+
+Get 5 most expensive English players:
+```
+http://ng-api.techpush.net/players?_search=England&_key=nationality&_sort=price&_order=desc&_end=5
+```
 
 Get all players who have the phrase "ph" in name:
 
