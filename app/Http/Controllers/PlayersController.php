@@ -103,7 +103,7 @@ class PlayersController extends Controller {
                 function arrange(&$items, $key, $order='asc'){
                     if(is_array($items)){
                         return usort($items, function($a, $b) use ($key, $order){
-                            return ($order=='desc'?-1:1)*strCmp($a->$key, $b->$key);
+                            return ($order=='desc'?-1:1)*(($key=='name')?(strCmp($a->$key, $b->$key)):($a->$key-$b->$key));
                         });
                     }
                     return false;
