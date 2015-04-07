@@ -43,7 +43,7 @@ class PlayersController extends Controller {
             $start = 0;
         }
         if(!$end || !is_numeric($end) || $end<=$start){
-            $end = $start+30;
+            $end = count($entries);
         }
 
         $re = (object) [
