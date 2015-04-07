@@ -110,13 +110,15 @@ class PlayersController extends Controller {
                 }
 
                 arrange($edited, $sort, $ord);
+
+                $entries = $edited;
             }
 
             if($start>=0 && $start<$total && $end>$start){
                 $tmp = [];
                 $max = min($end, $total);
                 for($i=$start; $i<$max; $i++){
-                    array_push($tmp, $edited[$i]);
+                    array_push($tmp, $entries[$i]);
                 }
                 $entries = $tmp;
             }
