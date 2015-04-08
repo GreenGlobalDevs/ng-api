@@ -119,7 +119,7 @@ For more info about Composer: https://getcomposer.org/
 
 ####3. Set permission
 
-Please make sure two directory /ng-api/storage and /ng-api//vendor are writtable.
+Please make sure two directories /ng-api/storage and /ng-api//vendor are writable.
 
 For more info about Laravel's installation: http://laravel.com/docs/5.0
 
