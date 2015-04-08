@@ -1,8 +1,8 @@
-## ng-api 
+# ng-api 
 
 RESTFul API using for AngularJS Training. Build with Laravel 5.
 
-### Developer guide
+## Developer guide
 
 Base URL : http://ng-api.techpush.net/
 
@@ -93,7 +93,90 @@ Result:
 
 If there is not any player found, it will return 'false'.
 
-#### Author by:
+
+## Run as local server
+
+If you want to install this REST API on your local machine, please follow the instructions below.
+
+####1. Clone source code:
+
+```
+git clone git@github.com:GreenGlobalDevs/ng-api.git
+```
+
+####2. Install Laravel dependencies:
+
+With Terminal, move the cursor into "ng-api" folder. Then:
+
+```
+php -r "readfile('https://getcomposer.org/installer');" | php
+php composer.phar install
+```
+
+Composer will retrieve the needed module specified by /composer.json file.
+
+For more info about Composer: https://getcomposer.org/
+
+####3. Set permission
+
+Please make sure two directory /ng-api/storage and /ng-api//vendor are writtable.
+
+For more info about Laravel's installation: http://laravel.com/docs/5.0
+
+####4. Localhost settings
+
+If you are using .nix system, edit /etc/hosts (no extension). Append a line to specify the domain you want to handle as local server.
+
+```
+127.0.0.1   localhost
+127.0.1.1   bella-mint.com  bella-mint
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+127.0.0.1 ng-api.angularjs.me
+```
+
+You also need to add a new config file into your nginx/site-enabled folder, for example:
+
+```
+server {
+    listen       80;
+    server_name  ng-api.angularjs.me;
+
+    charset      utf-8;
+
+    root /var/www/html/ng-api/public/;
+    index index.php index.htm index.html;
+
+    location / {
+        index  index.php index.html index.htm;
+    }
+
+}
+```
+
+For the case you are using Apache server:
+
+```
+Listen 80
+
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+    DocumentRoot /var/www/html/ng-api/public/;
+    ServerName ng-api.angularjs.me
+</VirtualHost>
+```
+
+If everything is OK, it would work for you.
+
+
+### Author by:
 
 - @GreenGlobal.vn
 - @ndaidong at Twitter
