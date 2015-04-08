@@ -113,7 +113,7 @@ php -r "readfile('https://getcomposer.org/installer');" | php
 php composer.phar install
 ```
 
-Composer will retrieve the needed module specified by /composer.json file.
+Composer will retrieve the needed modules specified by /composer.json file.
 
 For more info about Composer: https://getcomposer.org/
 
